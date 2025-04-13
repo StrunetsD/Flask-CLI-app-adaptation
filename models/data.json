@@ -1,0 +1,25 @@
+{
+    "clients": [
+        {
+            "name": "asd",
+            "address": "1234",
+            "phone": "12341234"
+        }
+    ],
+    "chefs": [
+        {
+            "name": "d"
+        }
+    ],
+    "couriers": [
+        {
+            "name": "d",
+            "transport": "d"
+        }
+    ],
+    "orders": [],
+    "finances": {
+        "income": 0.0
+    },
+    "last_order_id": 1
+}
