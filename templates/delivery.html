@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Заказы для доставки</h1>
+    <div class="orders">
+        {% for order in cooking_orders %}
+            <div class="order-card">
+                <h3>Заказ #{{ order.order_id }}</h3>
+                <p>Адрес: {{ order.client.address }}</p>
+                <p>Пиццы: {{ order.items|join(', ') }}</p>
+                <p>Статус: {{ order.state }}</p>
+                <form method="POST" action="/delivery">
+                    <input type="hidden" name="action" value="start_delivery">
+                    <input type="hidden" name="order_id" value="{{ order.order_id }}">
+                    <button type="submit">Доставить</button>
+                </form>
+            </div>
+        {% else %}
+            <p>Нет заказов для доставки.</p>
+        {% endfor %}
+
+        {% for order in delivering_orders %}
+            <div class="order-card">
+                <h3>Заказ #{{ order.order_id }}</h3>
+                <p>Адрес: {{ order.client.address }}</p>
+                <p>Пиццы: {{ order.items|join(', ') }}</p>
+                <p>Статус: {{ order.state }}</p>
+                <form method="POST" action="/delivery">
+                    <input type="hidden" name="action" value="complete_delivery">
+                    <input type="hidden" name="order_id" value="{{ order.order_id }}">
+                    <button type="submit">Подтвердить доставку</button>
+                </form>
+            </div>
+        {% else %}
+            <p>Нет заказов в пути.</p>
+        {% endfor %}
+    </div>
+{% endblock %}

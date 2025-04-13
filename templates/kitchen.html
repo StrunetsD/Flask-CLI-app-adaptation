@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Заказы на кухне</h1>
+    <div class="orders">
+        {% for order in orders %}
+            <div class="order-card">
+                <h3>Заказ #{{ order.order_id }}</h3>
+                <p>Клиент: {{ order.client.name }}</p>
+                <p>Пиццы: {{ order.items|join(', ') }}</p>
+                <p>Статус: {{ order.state }}</p>
+                <form method="POST" action="/kitchen">
+                    <input type="hidden" name="order_id" value="{{ order.order_id }}">
+                    <button type="submit">Начать готовить</button>
+                </form>
+            </div>
+        {% else %}
+            <p>Нет новых заказов.</p>
+        {% endfor %}
+    </div>
+{% endblock %}

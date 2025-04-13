@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pizzeria</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <nav>
+        <a href ="/">Домой</a>
+        <a href="/clients">Клиенты</a>
+        <a href="/chefs">Повара</a>
+        <a href="/couriers">Курьеры</a>
+        <a href="/orders">Заказать</a>
+        <a href="/kitchen">Кухня</a>
+        <a href="/delivery">Доставка</a>
+        <a href="/finances">Финансы</a>
+    </nav>
+        <h1>Добро пожаловать в пиццерию!</h1>
+    <div class="content">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>

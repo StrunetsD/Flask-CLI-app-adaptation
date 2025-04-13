@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Финансы</h1>
+
+    <div class="summary">
+        <h2>Общий доход: {{ total_income }} руб.</h2>
+    </div>
+
+    <div class="completed-orders">
+        <h2>Завершенные заказы</h2>
+        {% if completed_orders %}
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID Заказа</th>
+                        <th>Клиент</th>
+                        <th>Стоимость</th>
+                        <th>Дата</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for order in completed_orders %}
+                        <tr>
+                            <td>{{ order.id }}</td>
+                            <td>{{ order.client }}</td>
+                            <td>{{ order.price }} руб.</td>
+                            <td>{{ order.completed_at }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        {% else %}
+            <p>Нет завершенных заказов.</p>
+        {% endif %}
+    </div>
+{% endblock %}

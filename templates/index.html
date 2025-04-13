@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="features">
+        <div class="feature-card">
+            <h3>🍕 Свежие ингредиенты</h3>
+            <p>Используем только натуральные продукты</p>
+        </div>
+        <div class="feature-card">
+            <h3>🚚 Быстрая доставка</h3>
+            <p>Доставим за 30 минут или пицца бесплатно</p>
+        </div>
+        <div class="feature-card">
+            <h3>🏆 Лучшие повара</h3>
+            <p>Наши пиццайоло - мастера своего дела</p>
+        </div>
+    </div>
+
+    <div class="stats">
+        <h3>Наша статистика:</h3>
+        <div class="stat-grid">
+            <div class="stat-item">
+                <span class="stat-label">Довольных клиентов: </span>
+                <span class="stat-number">{{ clients|length }}</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">Выполненных заказов: </span>
+                <span class="stat-number">{{ orders|length }}</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">Видов пицц: </span>
+                <span class="stat-number">{{ menu|length }}</span>
+
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
