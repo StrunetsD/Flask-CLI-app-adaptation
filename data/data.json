@@ -1,0 +1,112 @@
+{
+    "clients": [
+        {
+            "name": "Анна Петрова",
+            "address": "ул. Ленина, 15",
+            "phone": "+79161234567"
+        },
+        {
+            "name": "Дмитрий",
+            "address": "asfsadfdsaf",
+            "phone": "375297744702"
+        },
+        {
+            "name": "Дмитрий",
+            "address": "asdf",
+            "phone": "375297744702"
+        }
+    ],
+    "chefs": [
+        {
+            "name": "Дмитрий"
+        },
+        {
+            "name": "zxcvzxc"
+        }
+    ],
+    "couriers": [
+        {
+            "name": "Дмитрий",
+            "transport": "самокат"
+        },
+        {
+            "name": "Дмитрий",
+            "transport": "самокат"
+        },
+        {
+            "name": "Дмитрий",
+            "transport": "самокат"
+        }
+    ],
+    "orders": [
+        {
+            "order_id": 14,
+            "client": "Анна Петрова",
+            "items": [
+                "Пепперони"
+            ],
+            "price": 500,
+            "state": "CompletedOrder"
+        },
+        {
+            "order_id": 18,
+            "client": "Анна Петрова",
+            "items": [
+                "Пепперони"
+            ],
+            "price": 500,
+            "state": "CompletedOrder"
+        },
+        {
+            "order_id": 20,
+            "client": "Анна Петрова",
+            "items": [
+                "Пепперони",
+                "Маргарита",
+                "Гавайская"
+            ],
+            "price": 1500,
+            "state": "CompletedOrder"
+        },
+        {
+            "order_id": 22,
+            "client": "Анна Петрова",
+            "items": [
+                "Пепперони"
+            ],
+            "price": 500,
+            "state": "CompletedOrder"
+        },
+        {
+            "order_id": 24,
+            "client": "Анна Петрова",
+            "items": [
+                "Пепперони"
+            ],
+            "price": 500,
+            "state": "CompletedOrder"
+        },
+        {
+            "order_id": 26,
+            "client": "Анна Петрова",
+            "items": [
+                "Пепперони"
+            ],
+            "price": 500,
+            "state": "CompletedOrder"
+        },
+        {
+            "order_id": 28,
+            "client": "Анна Петрова",
+            "items": [
+                "Пепперони"
+            ],
+            "price": 500,
+            "state": "NewOrder"
+        }
+    ],
+    "finances": {
+        "income": 4000.0
+    },
+    "last_order_id": 29
+}
